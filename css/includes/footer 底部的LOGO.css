@@ -3,27 +3,8 @@
   src: url("/font-awesome/webfonts/fa-solid-900.eot");
   src: url("/font-awesome/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("/font-awesome/webfonts/fa-solid-900.woff") format("woff"), url("/font-awesome/webfonts/fa-solid-900.ttf") format("truetype"), url("/font-awesome/webfonts/fa-solid-900.svg#micon") format("svg");
 }
-#logo-loop {
-  --logoloop-logoHeight: 40px;
-  --logoloop-gap: 50px;
-  margin: 20px auto;
-  min-height: 80px;
-  --logoloop-fadeColorAuto: #202020;
-  --logoloop-logoColor: #d3d3d3;
-  --logoloop-logoHoverColor: #d3d3d3;
-}
-@media (prefers-color-scheme: dark) {
-  #logo-loop {
-    --logoloop-fadeColorAuto: #202020;
-    --logoloop-logoColor: #fff;
-    --logoloop-logoHoverColor: #f0f0f0;
-  }
-  #logo-loop .logoloop__item img {
-    filter: invert(1);
-  }
-}
 #bottom-inner {
-  max-width: 800px;
+  max-width: 750px;
   clear: both;
   margin: auto;
   color: #808080;
@@ -34,22 +15,36 @@
   padding: 20px 25px;
   text-align: center;
 }
+.icon {
+  display: inline-block;
+  float: left;
+  margin-right: 15px;
+  margin-top: 15px;
+  font-size: 32px;
+  color: #808080;
+}
+.icon:hover {
+  color: #62b900;
+}
 #author {
   clear: both;
-  color: #d3d3d3;
-  padding-top: 20px;
-  font-size: 20px;
+  padding-top: 140px;
+  font-size: 18px;
   line-height: 30px;
 }
 #theme_author {
   text-decoration: none;
   color: #d3d3d3;
-  font-weight: normal;
+  font-weight: bold;
 }
 #theme_name {
   font-weight: bold;
   text-decoration: none;
-  line-height: 20px;
+  line-height: 30px;
+}
+.visits {
+  clear: both;
+  padding-bottom: 20px;
 }
 #theme_name svg {
   fill: #d3d3d3;
@@ -67,13 +62,4 @@
 }
 #theme_name svg:hover .pink {
   fill: #ee869a;
-}
-#author a[href*="creativecommons.org"] {
-  color: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  text-decoration: none;
-}
-#author a[href*="creativecommons.org"]:hover {
-  text-decoration: underline;
 }

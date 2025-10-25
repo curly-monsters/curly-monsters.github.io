@@ -3,11 +3,6 @@
   src: url("/font-awesome/webfonts/fa-solid-900.eot");
   src: url("/font-awesome/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("/font-awesome/webfonts/fa-solid-900.woff") format("woff"), url("/font-awesome/webfonts/fa-solid-900.ttf") format("truetype"), url("/font-awesome/webfonts/fa-solid-900.svg#micon") format("svg");
 }
-@font-face {
-  font-family: "fontawesome";
-  src: url("/font-awesome/webfonts/fa-solid-900.eot");
-  src: url("/font-awesome/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("/font-awesome/webfonts/fa-solid-900.woff") format("woff"), url("/font-awesome/webfonts/fa-solid-900.ttf") format("truetype"), url("/font-awesome/webfonts/fa-solid-900.svg#micon") format("svg");
-}
 body::-webkit-scrollbar {
   width: 7.5px;
   height: 10px;
@@ -22,17 +17,7 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:hover {
   background-color: #777;
 }
+/*滑道*/
 body::-webkit-scrollbar-track {
   border-radius: 10px;
-}
-html {
-  overflow-x: hidden;
-}
-body {
-  margin: 0;
-  overflow-x: hidden;
-  background-color: #202020;
-}
-#content-outer {
-  margin-top: 75px;
 }
