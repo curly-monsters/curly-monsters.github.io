@@ -1,0 +1,43 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="UTF-8"><title>Category: life [ CURLY MONSTERS ]</title><link rel="stylesheet" href="/css/reset.css"><link rel="stylesheet" href="/css/includes/header.css"><link rel="stylesheet" href="/css/includes/footer.css"><link rel="stylesheet" href="/css/includes/locate-button.css"><link rel="stylesheet" href="/css/includes/pagination.css"><link rel="stylesheet" href="/css/last.css"><link rel="stylesheet" href="/font-awesome/css/all.min.css"><link rel="stylesheet" href="/css/includes/alert/alert.css"><link rel="stylesheet" href="/css/category.css"><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><link rel="stylesheet" href="/css/last.css"><link rel="stylesheet" href="/css/logo-loop.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.32.2/tocbot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js" onerror="this.onerror=null;this.src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'"></script><script src="/js/third-party/jquery-fallback.js"></script><script>var isHome = false;
+var isCenter = false;
+var i18n = {
+    copy: {
+        success: "复制成功！",
+        error: "复制失败，请重新尝试！"
+    }
+};
+
+// Search configuration
+window.themeConfig = {
+    search: {"enable":true,"engine":"lunr","local":{"path":"search.xml"},"lunr":{"path":"search.json","maxResults":30,"minQueryLength":1,"debounceTime":300},"algolia":null,"google":{"cx":null}},
+    tagsPage: {"category":{"show_count":true},"tag":{"show_count":true,"alphabet_index":true,"korean":{"enabled":false}}},
+    i18n: {
+        localSearch: {
+            placeholder: "键入搜索",
+            empty: "(っ╥╯﹏╰╥c) 很抱歉没有查到这个词，请换一个词查询",
+            firstSearch: "第一次搜索，正在加载 index 文件... 请稍等",
+            error: "搜索功能暂时不可用，请稍后再试"
+        }
+    }
+};
+
+// Algolia configuration from site root _config.yml
+console.log('Debug: Setting up Algolia config from site root...');
+window.algolia = null;
+if (window.algolia) {
+    console.log('✓ Algolia config loaded from site root:', window.algolia);
+} else {
+    console.log('✗ No Algolia config found in site root _config.yml');
+    console.log('Please add algolia configuration to your site root _config.yml');
+}
+</script><meta name="generator" content="Hexo 8.0.0"></head><body class="other"><!-- Mixins, used on or off of the page--><!-- Hexo 主题的导航菜单模板（可能是 EJS 或 Pug 格式），用于生成顶部菜单的 HTML 结构--><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes"><div id="menu-outer"><div class="site-name"><a href=""> <img src="/img/curly LOGO2资源 98.svg"></a></div><div class="search"><input id="local-search-input" tpye="text" placeholder="键入搜索"><span class="search-icon"><i class="fa fa-search"></i></span><div class="local-search-result-cls" id="local-search-result" data-empty="(っ╥╯﹏╰╥c) 很抱歉没有查到这个词，请换一个词查询" data-first="localSearch.first"></div></div><div class="menu"><ul class="menu-icon">               //（移动端的三条横线按钮）<li></li><li></li><li></li></ul><ul id="nav"><img class="menu-avatar" src="https://pub-c5a7dfaf52904644b6311b684d800b3e.r2.dev/2025/10/LOGO%E5%A4%B4%E5%83%8F.png"><div class="menu-items"><li class="item-name"><a class="name-a" href="/"><i class="fas fa-home"></i> 主页</a></li><li class="item-name"><a class="name-a" href="/categories/life"><i class="fas fa-list"></i> 分类</a><ul class="submenu-items"><li class="subitem-name"><a href="/categories/life"><i class="fas fa-lightbulb"></i> 创造力</a></li><li class="subitem-name"><a href="/art"><i class="fas fa-palette"></i> 这是一个长名字</a></li><li class="subitem-name"><a href="/"><i class="fas fa-chart-bar"></i> 这是一个长名字（无空格）</a></li><li class="subitem-name"><a href="/"><i class="fas fa-atom"></i> 物理学</a></li><li class="subitem-name"><a href="/categories/Gallery"><i class="fas fa-album"></i> 图集</a></li></ul></li><li class="item-name"><a class="name-a" href="/archives"><i class="fas fa-archive"></i> 归档</a></li><li class="item-name"><a class="name-a" href="/tags"><i class="fas fa-tag"></i> 标签</a></li><li class="item-name"><a class="name-a" target="_blank" rel="noopener" href="https://dyingdown.github.io/theme-last-guide/site"><i class="fas fa-puzzle-piece"></i> Last</a></li><li class="item-name"><a class="name-a" href="/links"><i class="fas fa-link"></i> 链接</a></li></div></ul></div></div><div id="content-outer"><div id="content-inner"><div id="category-block"><h1>分类: life</h1><div class="category-item"><span class="period"><a href="/archives/2025">2025</a></span><div class="content"><div class="one-line"><time datetime="2025-10-20T04:00:00.000Z">10-20</time><a class="title" href="/2025/10/20/hello-world/">Hello World</a></div><div class="tags"><i class="fas fa-tag"></i></div></div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div></div><div id="bottom-outer"><div id="bottom-inner"><!-- LOGO 滚动组件（复刻 React 动态效果）--><div id="logo-loop" data-speed="120" data-direction="left" data-pause-on-hover="true" data-scale-on-hover="true" data-fade-out="true" data-fade-out-color="#ffffff"><style>#logo-loop {
+  --logoloop-logoHeight: 48px; /* LOGO 高度 */
+  --logoloop-gap: 40px; /* LOGO 间距 */
+  margin: 20px 0; /* 与上下内容的间距 */
+}
+/* 适配深色模式 */
+@media (prefers-color-scheme: dark) {
+  #logo-loop {
+    --logoloop-fadeColorAuto: #0b0b0b;
+  }
+}</style><div class="logoloop logoloop--fade logoloop--scale-hover"><div class="logoloop__track"><ul class="logoloop__list logoloop__list--original" role="list"><li class="logoloop__item" role="listitem"><a class="logoloop__link" target="_blank" rel="noopener" href="https://example1.com" title="Logo 1"><img src="/img/LOGO头像 1.png" alt="Logo 1" loading="lazy" decoding="async" draggable="false"></a></li><li class="logoloop__item" role="listitem"><a class="logoloop__link" target="_blank" rel="noopener" href="https://example2.com" title="Logo 2"><img src="/img/LOGO头像 2.png" alt="Logo 2" loading="lazy" decoding="async" draggable="false"></a></li><li class="logoloop__item" role="listitem"><a class="logoloop__link" target="_blank" rel="noopener" href="https://example3.com" title="Logo 3"><img src="/img/LOGO头像 3.png" alt="Logo 3" loading="lazy" decoding="async" draggable="false"></a></li></ul></div></div></div><!-- 作者信息与版权--><div id="author"><a id="theme_name" href="https://github.com/DyingDown/hexo-theme-last" target="_blank">Theme Last</a><span> made with </span><span id="heart">📕</span><span> by </span><a id="theme_author" href="https://www.xiaohongshu.com/user/profile/587ab9ec82ec397fe918c1ac" target="_blank">CURLY MONSTERS</a><br><span>© CURLY MONSTERS 2025-2025</span> · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a></div><!-- 访问统计--><div class="visits"><script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/bchiang7/busuanzi@gh-pages/bsz.pure.mini.js'"></script><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i> Visitors: <span id="busuanzi_value_site_uv"></span></span><span> | </span><span id="busuanzi_container_page_pv"><i class="fa fa-eye"></i> Views: <span id="busuanzi_value_page_pv"></span></span></div><!-- 回到顶部和评论按钮--><div class="side-buttons"><a id="back-to-top" href="#" style="color: #e37a90;" title="Back to top"><i class="fa fa-arrow-up"></i><span> Top</span></a><a id="go-to-comment" href="#comments" style="color: #33a6dc;" title="Go to comments"><i class="fa fa-comment"></i><span> Comment</span></a></div></div></div><!-- 引入 LOGO 滚动 JS（确保在页面底部加载）--><script src="/js/logo-loop.js"></script><script src="/js/third-party/tools.js"></script><script src="/js/third-party/multi-search.js"></script><script src="/js/third-party/lunr-search.js"></script><script src="/js/Message.js"></script><script src="/js/last.js"></script><script src="/js/third-party/social-share.js"></script><script src="/js/third-party/qrcode.js"></script><script src="/js/third-party/tools.js"></script><script src="/js/third-party/clipboard.js"></script><script src="/js/logo-loop.js"></script><script src="https://use.typekit.net/bkt6ydm.js"></script></body></html>

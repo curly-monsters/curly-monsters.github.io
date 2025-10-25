@@ -1,3 +1,6 @@
+//社交分享按钮的 CSS 样式，用于定义博客文章底部（或其他位置）的社交分享功能的外观和交互效果，包括各种社交平台（如微信、微博、Facebook、Twitter 等）的分享图标样式、颜色、悬停效果以及微信分享的二维码弹窗样式。
+核心功能解析：
+
 @font-face {
     font-family: "socialshare";
     src: url("/fonts/iconfont.eot");
