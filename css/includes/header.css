@@ -665,3 +665,21 @@ body.post > #menu-outer .search-icon {
     }
 }
 }
+@media (max-width: 799px) {
+  .menu .menu-icon {
+    position: relative;
+    z-index: 100;
+    pointer-events: auto;
+  }
+  .menu #nav.newNav {
+    z-index: 90;
+  }
+  #menu-outer {
+    pointer-events: none;
+  }
+  #menu-outer .menu-icon,
+  #menu-outer .search,
+  #menu-outer .site-name a {
+    pointer-events: auto;
+  }
+}
