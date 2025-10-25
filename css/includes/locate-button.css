@@ -12,7 +12,7 @@
 #sideButtons #back-to-top {
   position: relative;
   padding: 15px 10px 15px 12px;
-  margin: 5px 0 5px -4px;
+  margin: 20px 0 5px -4px;
   font-size: 18px;
   color: #fff;
   user-select: none;
@@ -28,11 +28,11 @@
   margin-top: 6px;
 }
 #sideButtons #back-to-top {
-  background-color: #33a6dc;
+  background-color: #0005d6;
 }
 #sideButtons #go-to-comment {
   display: none;
-  background-color: #e37a90;
+  background-color: #ff00b5;
 }
 #vcomment ~ #sideButtons >#go-to-comment {
   display: inline-block;

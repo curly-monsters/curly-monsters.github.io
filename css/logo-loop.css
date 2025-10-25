@@ -5,33 +5,12 @@
   user-select: none;
 
   /* 变量默认值（和 React 组件 props 对应） */
-  --logoloop-gap: 32px;
-  --logoloop-logoHeight: 28px;
-  --logoloop-fadeColorAuto: #000000;
+  /*--logoloop-gap: 32px;
+  /*--logoloop-logoHeight: 28px;
+  --logoloop-fadeColorAuto: inherit; /* 直接继承父元素的背景色 */
+  /*background-color: inherit; /* 确保自身背景与父元素一致（避免透明） */
 }
 
-/*color: $headerCt
-body.post > #menu-outer a
-    color: $headerPostCt
-*/
-
-/* 深色模式适配 */
-@media (prefers-color-scheme: dark) {
-  .logoloop--fade::before {
-    background: linear-gradient(
-      to right,
-      var(--logoloop-fadeColor, var(--logoloop-fadeColorAuto, #0b0b0b)) 0%,
-      rgba(11, 11, 11, 0) 100%
-    );
-  }
-  .logoloop--fade::after {
-    background: linear-gradient(
-      to left,
-      var(--logoloop-fadeColor, var(--logoloop-fadeColorAuto, #0b0b0b)) 0%,
-      rgba(11, 11, 11, 0) 100%
-    );
-  }
-}
 
 /* 轨道容器（承载多个列表副本） */
 .logoloop__track {
@@ -76,15 +55,33 @@ body.post > #menu-outer a
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+
 /* 悬停缩放效果（对应 scaleOnHover） */
 .logoloop--scale-hover {
-  padding-top: calc(var(--logoloop-logoHeight) * 0.1);
-  padding-bottom: calc(var(--logoloop-logoHeight) * 0.1);
+  padding-top: calc(var(--logoloop-logoHeight) * 0.3);
+  padding-bottom: calc(var(--logoloop-logoHeight) * 0.3);
 }
 .logoloop--scale-hover .logoloop__item:hover img {
-  transform: scale(1.2);
+  transform: scale(1.6);
   transform-origin: center;
 }
+
+
+/* 控制 SVG LOGO 的颜色 */
+.logoloop__item svg {
+  color: var(--logoloop-logoColor); /* 关键：通过 color 传递变量给 currentColor */
+  fill: currentColor; /* SVG 填充色继承 color */
+  stroke: currentColor; /* SVG 描边色继承 color */
+  transition: fill 0.3s ease;
+}
+
+/* 悬停变色 */
+.logoloop__item:hover svg {
+  color: var(--logoloop-logoHoverColor);
+  fill: currentColor;
+  stroke: currentColor;
+}
+
 
 /* 链接样式 */
 .logoloop__link {
