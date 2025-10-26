@@ -39,7 +39,7 @@
   color: #d3d3d3;
   padding-top: 20px;
   font-size: 20px;
-  line-height: 30px;
+  line-height: 50px;
 }
 #theme_author {
   text-decoration: none;
@@ -76,4 +76,5 @@
 }
 #author a[href*="creativecommons.org"]:hover {
   text-decoration: underline;
+  line-height: 50px;
 }
