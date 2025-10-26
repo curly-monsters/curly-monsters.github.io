@@ -1,11 +1,12 @@
 #sideButtons {
   position: fixed;
-  right: -3px;
+  right: 30px;
   bottom: 45px;
   writing-mode: vertical-lr;
   text-orientation: sideways;
-  transform: rotate(-180deg);
+  transform: rotate(-90deg);
   display: flex;
+  justify-content: center;
   justify-content: center;
 }
 #sideButtons #go-to-comment,
@@ -27,10 +28,10 @@
 #sideButtons #back-to-top i ~ span {
   margin-top: 6px;
 }
-#sideButtons #back-to-top {
+#back-to-top {
   background-color: #0005d6;
 }
-#sideButtons #go-to-comment {
+#go-to-comment {
   display: none;
   background-color: #ff00b5;
 }
