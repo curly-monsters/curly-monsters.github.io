@@ -3,6 +3,7 @@
   position: relative;
   overflow-x: hidden;
   user-select: none;
+  width: 100%;
 
   /* 变量默认值（和 React 组件 props 对应） */
   /*--logoloop-gap: 32px;
@@ -116,8 +117,8 @@
   left: 0;
   background: linear-gradient(
     to right,
-    var(--logoloop-fadeColor, var(--logoloop-fadeColorAuto, #ffffff)) 0%,
-    rgba(255, 255, 255, 0) 100%
+    var(--logoloop-fadeColor, var(--logoloop-fadeColorAuto, #0000)) 0%,
+    rgba(255, 255, 255, 10) 100%
   );
 }
 .logoloop--fade::after {

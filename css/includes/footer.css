@@ -5,16 +5,14 @@
 }
 #logo-loop {
   --logoloop-logoHeight: 40px;
-  --logoloop-gap: 50px;
+  --logoloop-gap: 70px;
   margin: 20px auto;
   min-height: 80px;
   --logoloop-fadeColorAuto: #202020;
-  --logoloop-logoColor: #d3d3d3;
-  --logoloop-logoHoverColor: #d3d3d3;
 }
 @media (prefers-color-scheme: dark) {
   #logo-loop {
-    --logoloop-fadeColorAuto: #202020;
+    --logoloop-fadeColorAuto: transparent;
     --logoloop-logoColor: #fff;
     --logoloop-logoHoverColor: #f0f0f0;
   }
@@ -23,7 +21,6 @@
   }
 }
 #bottom-inner {
-  max-width: 800px;
   clear: both;
   margin: auto;
   color: #808080;
