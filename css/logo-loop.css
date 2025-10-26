@@ -5,6 +5,8 @@
   user-select: none;
   width: 100%;
 
+  background-color: inherit; /* 确保自身背景与父元素一致，避免透明穿透 */
+
   /* 变量默认值（和 React 组件 props 对应） */
   /*--logoloop-gap: 32px;
   /*--logoloop-logoHeight: 28px;
@@ -63,7 +65,7 @@
   padding-bottom: calc(var(--logoloop-logoHeight) * 0.3);
 }
 .logoloop--scale-hover .logoloop__item:hover img {
-  transform: scale(1.6);
+  transform: scale(1.5);
   transform-origin: center;
 }
 
@@ -112,24 +114,25 @@
   z-index: 1;
 }
 
-/* 默认（亮色模式） */
+/* 默认（通用模式，适配任何背景色） */
 .logoloop--fade::before {
   left: 0;
   background: linear-gradient(
     to right,
-    var(--logoloop-fadeColor, var(--logoloop-fadeColorAuto, #0000)) 0%,
-    rgba(255, 255, 255, 10) 100%
+    /*直接继承父元素背景色，忽略变量默认值 */
+    var(--logoloop-fadeColor, var(--logoloop-fadeColorAuto, inherit)) 0%,
+    transparent 100%  
   );
 }
 .logoloop--fade::after {
   right: 0;
   background: linear-gradient(
     to left,
-    var(--logoloop-fadeColor, var(--logoloop-fadeColorAuto, #ffffff)) 0%,
-    rgba(255, 255, 255, 0) 100%
+    /* 同样继承父元素背景色 */
+    var(--logoloop-fadeColor, var(--logoloop-fadeColorAuto, inherit)) 0%,
+    transparent 100%  
   );
 }
-
 
 /* 减少动画（适配系统设置） */
 @media (prefers-reduced-motion: reduce) {

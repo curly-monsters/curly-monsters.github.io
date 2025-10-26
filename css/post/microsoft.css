@@ -1,16 +1,11 @@
-@font-face {
-  font-family: "fontawesome";
-  src: url("/font-awesome/webfonts/fa-solid-900.eot");
-  src: url("/font-awesome/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("/font-awesome/webfonts/fa-solid-900.woff") format("woff"), url("/font-awesome/webfonts/fa-solid-900.ttf") format("truetype"), url("/font-awesome/webfonts/fa-solid-900.svg#micon") format("svg");
-}
 /* 一级标题 */
 #post-content h1 {
-  color: #62b900;
+  color: #ff00b5;
   line-height: 30px;
 }
 /* 二级标题 */
 #post-content h2 {
-  background-color: #62b900;
+  background-color: #ff00b5;
   color: #fff;
   font-weight: normal !important;
   padding: 8px;
@@ -18,24 +13,24 @@
 /* 三级标题 */
 #post-content h3 {
   padding: 8px;
-  background-color: #5aab00;
+  background-color: #eb00b5;
   color: #000;
   font-weight: normal !important;
 }
 #post-content h4 {
-  color: rgba(114,192,0,0.65);
+  color: rgba(255,0,180,0.65);
   padding-top: 8px;
-  border-top: solid 2px #62b900;
+  border-top: solid 2px #ff00b5;
 }
 #post-content h5 {
-  color: #519500;
+  color: #d300b3;
   padding-top: 8px;
-  border-top: dotted #62b900 2px;
+  border-top: dotted #ff00b5 2px;
 }
 #post-content h6 {
-  color: #519500;
+  color: #d300b3;
   padding-bottom: 8px;
-  border-bottom: #62b900 solid 2px;
+  border-bottom: #ff00b5 solid 2px;
 }
 #post-content p {
   line-height: 28px;
@@ -54,7 +49,7 @@
 }
 #post-content ul li:not(:has(input[type="checkbox"])):before {
   content: " ";
-  background-color: #519500;
+  background-color: #d300b3;
   width: 12px;
   height: 12px;
   border-radius: 20px;
@@ -67,7 +62,7 @@
   background: none;
   width: 6px;
   height: 6px;
-  border: solid 3px #519500;
+  border: solid 3px #d300b3;
   border-radius: 20px;
   top: 6px;
   left: -20px;
@@ -78,7 +73,7 @@
   background: none;
   width: 6px;
   height: 6px;
-  border: solid 3px #519500;
+  border: solid 3px #d300b3;
   border-radius: 0px;
   top: 9px;
   left: -20px;
@@ -107,7 +102,7 @@
   height: 17px;
   text-align: center;
   line-height: 16px;
-  background: #519500;
+  background: #d300b3;
   border-radius: 20px;
   font-size: 14px;
 }
@@ -122,14 +117,14 @@
 #post-content input[type="checkbox"]:checked:before {
   content: '';
   background-color: #fff;
-  background: url("/img/checked.svg") no-repeat center, #519500;
+  background: url("/img/checked.svg") no-repeat center, #d300b3;
 }
 #post-content li input::before {
   content: "";
   display: inline-block;
   width: 1.0125rem;
   height: 1.0125rem;
-  border: 1.5px solid #519500;
+  border: 1.5px solid #d300b3;
   border-radius: 2.2rem;
   background-color: #fdfdfd;
   margin-left: -1rem;
@@ -142,13 +137,13 @@
 */
 #post-content blockquote::before {
   content: "❝";
-  color: rgba(98,185,0,0.5);
+  color: rgba(255,0,181,0.5);
   font-size: 34px;
   line-height: 34px;
   font-weight: 700;
 }
 #post-content blockquote {
-  border: solid 1px #62b900;
+  border: solid 1px #ff00b5;
   padding: 10px 10px 10px 20px;
   margin: 20px 0;
   border-radius: 6px;
@@ -160,7 +155,7 @@
 #post-content blockquote::after {
   content: "❞";
   float: right;
-  color: rgba(98,185,0,0.5);
+  color: rgba(255,0,181,0.5);
 }
 #post-content blockquote p {
   text-indent: 30px;
@@ -179,14 +174,14 @@
 */
 #post-content a {
   text-decoration: underline;
-  text-decoration-color: rgba(90,171,0,0.1);
+  text-decoration-color: rgba(235,0,181,0.1);
   text-decoration-thickness: 2px;
-  color: #62b900;
+  color: #ff00b5;
 }
 /* 加粗 */
 #post-content strong {
   font-weight: bold;
-  color: #62b900;
+  color: #ff00b5;
 }
 #post-content strong::after {
   content: '」';
@@ -196,23 +191,23 @@
 }
 /* 斜体 */
 #post-content em {
-  color: #62b900;
+  color: #ff00b5;
   font-weight: bold;
 }
 /* 加粗斜体 */
 #post-content em strong {
-  color: #62b900;
+  color: #ff00b5;
 }
 /* 删除线 */
 #post-content del {
-  color: #62b900;
+  color: #ff00b5;
 }
 /* 分隔线
 * 粗细、样式和颜色
 */
 #post-content hr {
   border: none;
-  border-top: 3px dotted #62b900;
+  border-top: 3px dotted #ff00b5;
   height: 0;
 }
 /* 图片
@@ -229,12 +224,12 @@
 #post-content p code,
 #post-content li code,
 #post-content table code {
-  background-color: rgba(98,185,0,0.1);
+  background-color: rgba(255,0,181,0.1);
   padding: 0 3px;
   border-radius: 5px;
   margin: 0 2px;
   color: #000;
-  border: solid #62b900 1px;
+  border: solid #ff00b5 1px;
   line-height: 25px;
 }
 /*
@@ -242,12 +237,12 @@
 */
 #post-content table tr th,
 #post-content table tr td {
-  border: #62b900 solid 1px;
+  border: #ff00b5 solid 1px;
 }
 #post-content table tr th {
-  background-color: #62b900;
+  background-color: #ff00b5;
   color: #fff;
 }
 #post-content table tr:nth-child(2n) {
-  background-color: #5aab00;
+  background-color: #eb00b5;
 }

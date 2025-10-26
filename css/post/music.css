@@ -1,9 +1,4 @@
 @font-face {
-  font-family: "fontawesome";
-  src: url("/font-awesome/webfonts/fa-solid-900.eot");
-  src: url("/font-awesome/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("/font-awesome/webfonts/fa-solid-900.woff") format("woff"), url("/font-awesome/webfonts/fa-solid-900.ttf") format("truetype"), url("/font-awesome/webfonts/fa-solid-900.svg#micon") format("svg");
-}
-@font-face {
   font-family: "Headings";
   src: url("/font-awesome/webfonts/fa-solid-900.eot");
   src: url("/font-awesome/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("/font-awesome/webfonts/fa-solid-900.woff") format("woff"), url("/font-awesome/webfonts/fa-solid-900.ttf") format("truetype"), url("/font-awesome/webfonts/fa-solid-900.svg#micon") format("svg");
@@ -46,18 +41,18 @@ color:#2b2b2b;
   font-size: 25px;
   display: inline-block;
   font-weight: bold;
-  color: #62b900;
+  color: #ff00b5;
 }
 /* 一级标题修饰 请参考有实例的主题 */
 /* 二级标题 */
 #post-content h2 {
   display: block;
-  border-bottom: 4px solid #62b900;
+  border-bottom: 4px solid #ff00b5;
 }
 /* 二级标题内容 */
 #post-content h2 {
   display: flex;
-  color: #62b900;
+  color: #ff00b5;
   font-size: 20px;
 }
 /* 二级标题前缀 */
@@ -78,7 +73,7 @@ color:#2b2b2b;
   width: 200px;
   height: 10px;
   border-top-left-radius: 20px;
-  background: rgba(98,185,0,0.5);
+  background: rgba(255,0,181,0.5);
   color: #fff;
   font-size: 16px;
   letter-spacing: 0.544px;
@@ -112,7 +107,7 @@ color:#2b2b2b;
   left: 0;
   right: 0;
   bottom: 0px;
-  border-bottom: 2px solid rgba(114,192,0,0.65);
+  border-bottom: 2px solid rgba(255,0,180,0.65);
   color: #2b2b2b;
 }
 #post-content h3:before {
@@ -123,7 +118,7 @@ color:#2b2b2b;
   content: '\f58f';
   height: 32px;
   display: block;
-  color: rgba(114,192,0,0.65);
+  color: rgba(255,0,180,0.65);
   margin: auto;
 }
 /* 三级标题修饰 请参考有实例的主题 */
@@ -135,7 +130,7 @@ color:#2b2b2b;
 #post-content h4:before {
   font-family: "Headings";
   content: '\f8cf';
-  color: rgba(114,192,0,0.65);
+  color: rgba(255,0,180,0.65);
   display: inline-block;
   margin-right: 5px;
 }
@@ -151,7 +146,7 @@ color:#2b2b2b;
 }
 #post-content ul li:not(:has(input[type="checkbox"])):before {
   content: "";
-  background: rgba(98,185,0,0.5);
+  background: rgba(255,0,181,0.5);
   width: 12px;
   height: 12px;
   border-radius: 20px;
@@ -164,7 +159,7 @@ color:#2b2b2b;
   background: none;
   width: 6px;
   height: 6px;
-  border: solid 3px rgba(98,185,0,0.5);
+  border: solid 3px rgba(255,0,181,0.5);
   border-radius: 20px;
   top: 6px;
   left: -20px;
@@ -175,7 +170,7 @@ color:#2b2b2b;
   background: none;
   width: 6px;
   height: 6px;
-  border: solid 3px rgba(98,185,0,0.5);
+  border: solid 3px rgba(255,0,181,0.5);
   border-radius: 0px;
   top: 6px;
   left: -20px;
@@ -196,7 +191,7 @@ color:#2b2b2b;
 #post-content ol>li::before {
   content: counter(li);
   counter-increment: li 1;
-  color: #62b900;
+  color: #ff00b5;
   position: absolute;
   top: 3.5px;
   left: -24px;
@@ -204,8 +199,8 @@ color:#2b2b2b;
   height: 17px;
   text-align: center;
   line-height: 16px;
-  border: 1px solid rgba(98,185,0,0.5);
-  background: rgba(98,185,0,0.1);
+  border: 1px solid rgba(255,0,181,0.5);
+  background: rgba(255,0,181,0.1);
   border-radius: 20px;
   letter-spacing: -2px !important;
   font-size: 14px;
@@ -222,14 +217,14 @@ color:#2b2b2b;
 #post-content input[type="checkbox"]:checked:before {
   content: '';
   background-color: #fff;
-  background: url("/img/checked.svg") no-repeat center, rgba(114,192,0,0.65);
+  background: url("/img/checked.svg") no-repeat center, rgba(255,0,180,0.65);
 }
 #post-content li input::before {
   content: "";
   display: inline-block;
   width: 1.0125rem;
   height: 1.0125rem;
-  border: 1px solid rgba(114,192,0,0.65);
+  border: 1px solid rgba(255,0,180,0.65);
   border-radius: 0.2rem;
   background-color: #fdfdfd;
   margin-left: -1rem;
@@ -242,7 +237,7 @@ color:#2b2b2b;
 */
 #post-content blockquote::before {
   content: "❝";
-  color: rgba(98,185,0,0.5);
+  color: rgba(255,0,181,0.5);
   font-size: 34px;
   line-height: 1;
   font-weight: 700;
@@ -258,8 +253,8 @@ color:#2b2b2b;
   padding: 10px 10px 10px 20px;
   margin: 20px 0;
   box-sizing: inherit;
-  border: solid rgba(98,185,0,0.4) 1px;
-  background: rgba(98,185,0,0.1);
+  border: solid rgba(255,0,181,0.4) 1px;
+  background: rgba(255,0,181,0.1);
 }
 #post-content blockquote footer {
   display: block;
@@ -277,22 +272,22 @@ color:#2b2b2b;
 #post-content blockquote::after {
   content: "❞";
   float: right;
-  color: rgba(98,185,0,0.5);
+  color: rgba(255,0,181,0.5);
 }
 /* 链接
 * border-bottom: 1px solid #009688;
 */
 #post-content a {
-  color: #62b900;
+  color: #ff00b5;
   font-weight: normal;
-  border-bottom: 1px solid #5aab00;
+  border-bottom: 1px solid #eb00b5;
 }
 #post-content strong::before {
   content: '「';
 }
 /* 加粗 */
 #post-content strong {
-  color: #519500;
+  color: #d300b3;
   font-weight: bold;
 }
 #post-content strong::after {
@@ -301,16 +296,16 @@ color:#2b2b2b;
 /* 斜体 */
 #post-content em {
   font-style: normal;
-  color: #519500;
+  color: #d300b3;
   font-weight: bold;
 }
 /* 加粗斜体 */
 #post-content em strong {
-  color: #519500;
+  color: #d300b3;
 }
 /* 删除线 */
 #post-content del {
-  color: #519500;
+  color: #d300b3;
 }
 /* 分隔线
 * 粗细、样式和颜色
@@ -320,7 +315,7 @@ color:#2b2b2b;
   height: 1px;
   padding: 0;
   border: none;
-  border-top: 2px solid #5aab00;
+  border-top: 2px solid #eb00b5;
 }
 /* 图片
 * 宽度 width:80%;
@@ -338,8 +333,8 @@ color:#2b2b2b;
 #post-content p code,
 #post-content li code,
 #post-content table code {
-  color: #519500;
-  background: rgba(90,171,0,0.1);
+  color: #d300b3;
+  background: rgba(235,0,181,0.1);
   padding: 0 2px;
   border-radius: 2px;
   height: 21px;
@@ -355,12 +350,12 @@ color:#2b2b2b;
 #post-content table tr td {
   font-size: 14px;
   color: #595959;
-  border: solid rgba(98,185,0,0.4) 1px;
+  border: solid rgba(255,0,181,0.4) 1px;
 }
 #post-content table tr th {
-  background: rgba(98,185,0,0.1);
+  background: rgba(255,0,181,0.1);
   font-weight: bold;
 }
 #post-content table tr:nth-child(2n) {
-  background: rgba(98,185,0,0.1);
+  background: rgba(255,0,181,0.1);
 }

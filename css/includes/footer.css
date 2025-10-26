@@ -1,24 +1,9 @@
-@font-face {
-  font-family: "fontawesome";
-  src: url("/font-awesome/webfonts/fa-solid-900.eot");
-  src: url("/font-awesome/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("/font-awesome/webfonts/fa-solid-900.woff") format("woff"), url("/font-awesome/webfonts/fa-solid-900.ttf") format("truetype"), url("/font-awesome/webfonts/fa-solid-900.svg#micon") format("svg");
-}
 #logo-loop {
   --logoloop-logoHeight: 40px;
   --logoloop-gap: 70px;
   margin: 20px auto;
   min-height: 80px;
-  --logoloop-fadeColorAuto: #202020;
-}
-@media (prefers-color-scheme: dark) {
-  #logo-loop {
-    --logoloop-fadeColorAuto: transparent;
-    --logoloop-logoColor: #fff;
-    --logoloop-logoHoverColor: #f0f0f0;
-  }
-  #logo-loop .logoloop__item img {
-    filter: invert(1);
-  }
+  width: calc(100vw - 40px);
 }
 #bottom-inner {
   clear: both;

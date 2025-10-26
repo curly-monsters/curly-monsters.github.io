@@ -1,9 +1,4 @@
 /*** I learnt from this https://learnku.com/f2e/t/29779 *******/
-@font-face {
-  font-family: "fontawesome";
-  src: url("/font-awesome/webfonts/fa-solid-900.eot");
-  src: url("/font-awesome/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("/font-awesome/webfonts/fa-solid-900.woff") format("woff"), url("/font-awesome/webfonts/fa-solid-900.ttf") format("truetype"), url("/font-awesome/webfonts/fa-solid-900.svg#micon") format("svg");
-}
 @-moz-keyframes message-move-in-center {
   0% {
 /* 前边分析过了，弹出动画是一个自上而下的淡入过程 */

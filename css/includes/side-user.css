@@ -1,10 +1,5 @@
-@font-face {
-  font-family: "fontawesome";
-  src: url("/font-awesome/webfonts/fa-solid-900.eot");
-  src: url("/font-awesome/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("/font-awesome/webfonts/fa-solid-900.woff") format("woff"), url("/font-awesome/webfonts/fa-solid-900.ttf") format("truetype"), url("/font-awesome/webfonts/fa-solid-900.svg#micon") format("svg");
-}
 .side-user {
-  border-top: 2px #62b900 solid;
+  border-top: 2px #ff00b5 solid;
   -webkit-box-shadow: 1px 0 5px rgba(100,100,100,0.4);
   box-shadow: 1px 0 5px rgba(100,100,100,0.4);
   margin-bottom: 20px;
@@ -32,7 +27,7 @@
   z-index: 2;
 }
 .qrButton path {
-  fill: #62b900;
+  fill: #ff00b5;
 }
 .avatar {
   width: 150px;
@@ -83,8 +78,8 @@
 }
 .payButtons button {
   border-radius: 6px;
-  color: #62b900;
-  border: solid 1px #62b900;
+  color: #ff00b5;
+  border: solid 1px #ff00b5;
   cursor: pointer;
   padding: 5px 10px;
   font-size: 15px;
@@ -92,7 +87,7 @@
   padding: 5px 12px;
 }
 .payButtons button.selected {
-  background-color: #62b900;
+  background-color: #ff00b5;
   color: #fff;
 }
 .clearfix::after {

@@ -1,8 +1,3 @@
-@font-face {
-  font-family: "fontawesome";
-  src: url("/font-awesome/webfonts/fa-solid-900.eot");
-  src: url("/font-awesome/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("/font-awesome/webfonts/fa-solid-900.woff") format("woff"), url("/font-awesome/webfonts/fa-solid-900.ttf") format("truetype"), url("/font-awesome/webfonts/fa-solid-900.svg#micon") format("svg");
-}
 #copyright {
   width: 100%;
   padding-top: 30px;
@@ -13,7 +8,7 @@
 }
 #copyright #simpleCopyright #license {
   letter-spacing: 2px;
-  border-bottom: 1px solid #62b900;
+  border-bottom: 1px solid #ff00b5;
 }
 #copyright #simpleCopyright #license i {
   line-height: 25px;
