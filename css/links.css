@@ -1,0 +1,132 @@
+/*
+美化化博客的「链接页面」（通常用于展示友情链接、推荐网站等），包括链接卡片的布局、
+图片样式、文字排版以及响应式适配（在不同屏幕尺寸下自动调整布局）。
+*/
+@font-face {
+  font-family: "fontawesome";
+  src: url("/font-awesome/webfonts/fa-solid-900.eot");
+  src: url("/font-awesome/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("/font-awesome/webfonts/fa-solid-900.woff") format("woff"), url("/font-awesome/webfonts/fa-solid-900.ttf") format("truetype"), url("/font-awesome/webfonts/fa-solid-900.svg#micon") format("svg");
+}
+#content-outer {
+/* 外层容器占满宽度 */
+  width: 100%;
+}
+.links {
+  color: #fff; /* 文字白色 */
+  width: 80%; /* 默认宽度80% */
+  margin: 100px auto 0; /* 顶部外边距100px，水平居中 */
+}
+/* 大屏幕（≥1200px）时，容器宽度85% */
+@media (min-width: 1200px) {
+  .links {
+    width: 85%;
+  }
+}
+/* 中大屏幕（≥920px）时，容器宽度65% */
+@media (min-width: 920px) {
+  .links {
+    width: 65%;
+  }
+}
+.links h2 {
+  font-size: 1.8em;
+}
+.links h3 {
+  font-size: 1.2em;
+}
+.group-items {
+  padding: 0;
+  margin-bottom: 50px;
+  width: 100%;
+}
+.item-friend {
+  list-style-type: none; /* 去除列表默认圆点 */
+  display: inline-block; /*  inline-block布局，可横向排列 */
+  margin: 10px auto;
+  width: 100%; /* 默认占满一行（移动端） */
+  flex: 1 0 18.75em;
+  margin: 0 0 1.875rem;
+  border-radius: 10px; /* 圆角卡片 */
+  background-color: #d3d3d3; /* 浅灰色背景 */
+  color: #fff; /* 文字白色 */
+  border: #d3d3d3 solid 2px; /* 边框与背景同色 */
+}
+@media (min-width: 37.5rem) {
+  .item-friend {
+    margin: 0 0.9375em 15px; /* 左右间距0.9375em（约15px），底部间距15px */
+  }
+}
+@media (min-width: calc((2 * 0.625em) + (2 * 18.75em))) {
+  .item-friend {
+    max-width: calc(100% / 2 - 1.5em * 2); /* 宽度=50% - 左右总间距 */
+  }
+}
+@media (min-width: calc((2 * 0.625em) + (3 * 18.75em))) {
+  .item-friend {
+    max-width: calc(100% / 3 - 1.5em * 2); /* 宽度=33.3% - 左右总间距 */
+  }
+}
+@media (min-width: calc(2 * 0.625em + 3 * $s)) {
+  .item-friend {
+    flex: 1 0 calc(100% / 3 - 0.9375em * 2);
+  }
+}
+.links .site-preview {
+  text-align: center; /* 图标居中 */
+  width: 70px; /* 固定宽度70px */
+  float: left; /* 左浮动，与文字并排 */
+  border-radius: 80px; /* 圆形图标（半径80px > 宽度70px，确保完全圆形） */
+  margin: 15px; /* 四周间距15px */
+  border: solid #d3d3d3 2px; /* 浅灰色边框 */
+  transform-origin: center; /* 旋转中心点为元素中心 */
+  transition: 0.5s; /* 动画过渡时间0.5秒 */
+}
+.links .site-preview:hover {
+  transform: rotate(360deg); /* 鼠标悬停时旋转360度 */
+}
+.links .link-title {
+  border-bottom: solid 1px #323232; /* 底部灰色实线 */
+  padding-bottom: 20px; /* 底部内边距20px（与下划线保持距离） */
+  font-size: 30px; /* 标题大小30px */
+  line-height: 30px; /* 行高等于字体大小，避免上下留白 */
+}
+.links .group-description {
+  margin: 30px 1%; /* 上下间距30px，左右1%间距 */
+}
+.links .site-name {
+  margin: 20px 10px 10px 110px; /* 左间距110px（避开左侧70px图标+15px边距） */
+  font-weight: bold; /* 文字加粗 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; /* 文字不换行，超出部分显示省略号（...） */
+  font-size: 1.2em; /* 字体大小1.2倍默认值 */
+  line-height: 24px; /* 行高24px */
+}
+.links .site-description {
+  margin-left: 110px; /* 与网站名称对齐，避开图标 */
+  margin-right: 7%; /* 右侧留7%间距，避免贴边 */
+  padding: 10px;
+  padding-left: 0; /* 左内边距0，与名称左对齐 */
+  border-top: dashed #646464 1px; /* 顶部灰色虚线（分隔名称和描述） */
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; /* 同样限制不换行，超出显示省略号 */
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.clearfix::before {
+  content: "";
+  display: block;
+  clear: both;
+}
+.links a {
+  color: #fff; /* 链接文字白色（适配深色背景） */
+  text-decoration: none; /* 去除默认下划线 */
+}
+#vcomment {
+  clear: both; /* 清除左右浮动，确保评论区在所有链接项下方 */
+}
