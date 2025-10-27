@@ -1,0 +1,94 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="UTF-8"><title>about [ 记录技术与生活的小角落 ]</title><link rel="stylesheet" href="/css/reset.css"><link rel="stylesheet" href="/css/includes/header.css"><link rel="stylesheet" href="/css/includes/footer.css"><link rel="stylesheet" href="/css/includes/locate-button.css"><link rel="stylesheet" href="/css/includes/pagination.css"><link rel="stylesheet" href="/css/last.css"><link rel="stylesheet" href="/font-awesome/css/all.min.css"><link rel="stylesheet" href="/css/includes/alert/alert.css"><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><link rel="stylesheet" href="/css/last.css"><link rel="stylesheet" href="/css/logo-loop.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.32.2/tocbot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js" onerror="this.onerror=null;this.src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'"></script><script src="/js/third-party/jquery-fallback.js"></script><script>var isHome = false;
+var isCenter = false;
+var i18n = {
+    copy: {
+        success: "复制成功！",
+        error: "复制失败，请重新尝试！"
+    }
+};
+
+// Search configuration
+window.themeConfig = {
+    search: {"enable":true,"engine":"lunr","local":{"path":"search.xml"},"lunr":{"path":"search.json","maxResults":30,"minQueryLength":1,"debounceTime":300},"algolia":null,"google":{"cx":null}},
+    tagsPage: {"category":{"show_count":true},"tag":{"show_count":true,"alphabet_index":true,"korean":{"enabled":false}}},
+    i18n: {
+        localSearch: {
+            placeholder: "键入搜索",
+            empty: "(っ╥╯﹏╰╥c) 很抱歉没有查到这个词，请换一个词查询",
+            firstSearch: "第一次搜索，正在加载 index 文件... 请稍等",
+            error: "搜索功能暂时不可用，请稍后再试"
+        }
+    }
+};
+
+// Algolia configuration from site root _config.yml
+console.log('Debug: Setting up Algolia config from site root...');
+window.algolia = null;
+if (window.algolia) {
+    console.log('✓ Algolia config loaded from site root:', window.algolia);
+} else {
+    console.log('✗ No Algolia config found in site root _config.yml');
+    console.log('Please add algolia configuration to your site root _config.yml');
+}
+</script><meta name="generator" content="Hexo 8.0.0"></head><body class="other"><!-- Mixins, used on or off of the page--><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes"><div id="menu-outer"><div class="site-name"><a href=""> <img src="/img/curly LOGO2资源 98.svg"></a></div><div class="search"><input id="local-search-input" tpye="text" placeholder="键入搜索"><span class="search-icon"><i class="fa fa-search"></i></span><div class="local-search-result-cls" id="local-search-result" data-empty="(っ╥╯﹏╰╥c) 很抱歉没有查到这个词，请换一个词查询" data-first="localSearch.first"></div></div><div class="menu"><ul class="menu-icon"><li></li><li></li><li></li></ul><ul id="nav"><img class="menu-avatar" src="https://pub-c5a7dfaf52904644b6311b684d800b3e.r2.dev/2025/10/LOGO%E5%A4%B4%E5%83%8F.png"><div class="menu-items"><li class="item-name"><a class="name-a" href="/"><i class="fas fa-undefined"></i> 主页</a></li><li class="item-name"><a class="name-a" href="/categories/life"><i class="fas fa-undefined"></i> 分类</a><ul class="submenu-items"><li class="subitem-name"><a href="/categories/life"><i class="fas fa-undefined"></i> 编程创造力</a></li><li class="subitem-name"><a href="/links"><i class="fas fa-undefined"></i> 认识艺术家</a></li><li class="subitem-name"><a href="/page-name"><i class="fas fa-undefined"></i> 动态网站分享</a></li><li class="subitem-name"><a href="/"><i class="fas fa-undefined"></i> 素材收藏夹</a></li><li class="subitem-name"><a href="/categories/Gallery"><i class="fas fa-undefined"></i> 其他笔记</a></li></ul></li><li class="item-name"><a class="name-a" href="/archive"><i class="fas fa-undefined"></i> 图集</a></li><li class="item-name"><a class="name-a" href="/tags"><i class="fas fa-undefined"></i> 标签</a></li><li class="item-name"><a class="name-a" target="_blank" rel="noopener" href="https://dyingdown.github.io/theme-last-guide/site"><i class="fas fa-undefined"></i> 关于</a></li><li class="item-name"><a class="name-a" href="/links"><i class="fas fa-undefined"></i> 链接</a></li><li class="item-name"><a class="name-a" href="#"><i class="fas fa-undefined"></i> 关于</a><ul class="submenu-items"><li class="subitem-name"><a href="/about"><i class="fas fa-undefined"></i> 博主</a></li></ul></li></div></ul></div></div><div id="content-outer"><div id="content-inner"><article id="page"></article><div id="paginator"></div></div></div><div id="bottom-outer"><div id="bottom-inner"><!-- LOGO 滚动组件（复刻 React 动态效果）--><div id="logo-loop" data-speed="120" data-direction="left" data-pause-on-hover="true" data-scale-on-hover="true" data-fade-out="true" data-fade-out-color="inherit"><div class="logoloop logoloop--fade logoloop--scale-hover"><div class="logoloop__track"><ul class="logoloop__list logoloop__list--original" role="list"><li class="logoloop__item" role="listitem"><a class="logoloop__link" target="_blank" rel="noopener" href="https://example1.com" title="Logo 1"><img src="/img/邮件资源 1.svg" alt="Logo 1" loading="lazy" decoding="async" draggable="false"></a></li><li class="logoloop__item" role="listitem"><a class="logoloop__link" target="_blank" rel="noopener" href="https://example2.com" title="微信"><img src="/img/wechat-seeklogo.svg" alt="微信" loading="lazy" decoding="async" draggable="false"></a></li><li class="logoloop__item" role="listitem"><a class="logoloop__link" target="_blank" rel="noopener" href="https://www.xiaohongshu.com/user/profile/587ab9ec82ec397fe918c1ac" title="小红书"><img src="/img/小红书 LOGO.svg" alt="小红书" loading="lazy" decoding="async" draggable="false"></a></li><li class="logoloop__item" role="listitem"><a class="logoloop__link" target="_blank" rel="noopener" href="https://www.instagram.com/curly_monsters/?hl=zh-cn" title="instagram"><img src="/img/instagram LOGO资源 2.svg" alt="instagram" loading="lazy" decoding="async" draggable="false"></a></li></ul></div></div></div><!-- 作者信息与版权--><div id="author"><span>© CURLY MONSTERS 2025-2025</span> · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a></div><!-- LeanCloud 统计（核心修正部分）--><div class="leancloud-visitors"><!-- 加载 LeanCloud SDK--><script src="https://cdn.jsdelivr.net/npm/leancloud-storage@4.12.0/dist/av-min.js"></script><!-- JavaScript 代码块（注意缩进必须统一）--><script>// 初始化 LeanCloud（缩进统一为 2 个空格）
+const AV = window.AV;
+AV.init({
+  appId: 'cf3F30PluhIiPB3Q7KfJTyDl-gzGzoHsz',
+  appKey: 'ux9FifhUXElSZpmsROFwYf0E',
+  serverURLs: 'avq7pyqe.us-w1-cname.lncldglobal.com'  //'https://curly-monsters.com.leanapp.cn' // 替换为实际域名
+});
+
+// 统计页面 PV（浏览量）
+function updatePV() {
+  const Page = AV.Object.extend('Page');
+  const query = new AV.Query(Page);
+  const url = window.location.pathname;
+  query.equalTo('url', url);
+  query.find().then(function(results) {
+    if (results.length > 0) {
+      const page = results[0];
+      page.increment('pv', 1);
+      page.save();
+    } else {
+      const page = new Page();
+      page.set('url', url);
+      page.set('pv', 1);
+      page.save();
+    }
+  }).then(function() {
+    // 同步更新显示的 PV 数
+    query.find().then(function(results) {
+      const pvCount = results[0]?.get('pv') || 0;
+      document.querySelector('.leancloud-pv-count').textContent = pvCount;
+    });
+  });
+}
+
+// 统计站点 UV（访客数，简化版）
+function updateUV() {
+  const Visitor = AV.Object.extend('Visitor');
+  const query = new AV.Query(Visitor);
+  // 使用 localStorage 记录唯一标识，避免重复计数
+  let visitorId = localStorage.getItem('visitorId');
+  if (!visitorId) {
+    visitorId = Math.random().toString(36).substr(2, 9);
+    localStorage.setItem('visitorId', visitorId);
+  }
+  query.equalTo('id', visitorId);
+  query.find().then(function(results) {
+    if (results.length === 0) {
+      const visitor = new Visitor();
+      visitor.set('id', visitorId);
+      visitor.save();
+    }
+    // 获取总 UV 数并更新显示
+    new AV.Query(Visitor).count().then(function(count) {
+      document.querySelector('.leancloud-uv-count').textContent = count;
+    });
+  });
+}
+
+// 页面加载时执行统计
+updatePV();
+updateUV();
+</script><!-- 显示统计数据（注意：必须放在 script 标签外面，且缩进正确）--><span class="leancloud-pv"><i class="fa fa-eye"></i> 浏览量：<span class="leancloud-pv-count">0</span></span><span> | </span><span class="leancloud-uv"><i class="fa fa-user"></i> 访客数：<span class="leancloud-uv-count">0</span></span></div></div></div><!-- 引入 LOGO 滚动 JS（确保在页面底部加载）--><script src="/js/logo-loop.js"></script><script src="/js/third-party/tools.js"></script><script src="/js/third-party/multi-search.js"></script><script src="/js/third-party/lunr-search.js"></script><script src="/js/Message.js"></script><script src="/js/last.js"></script><script src="/js/third-party/social-share.js"></script><script src="/js/third-party/qrcode.js"></script><script src="/js/third-party/tools.js"></script><script src="/js/third-party/clipboard.js"></script><script src="/js/third-party/view-image.js"></script><script src="/js/logo-loop.js"></script><script src="https://use.typekit.net/bkt6ydm.js"></script></body></html>

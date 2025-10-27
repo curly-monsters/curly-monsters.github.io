@@ -1,3 +1,5 @@
+//静态博客的本地搜索功能实现，主要用于在博客中添加客户端搜索功能，让用户可以在本地页面内搜索文章内容，无需依赖后端服务器。
+
 // A local search script with the help of [hexo-generator-search](https://github.com/PaicHyperionDev/hexo-generator-search)
 // Copyright (C) 2017 
 // Liam Huang <http://github.com/Liam0205>

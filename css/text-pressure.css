@@ -1,0 +1,44 @@
+/* 引入变量字体 */
+@font-face {
+    font-family: 'Inter Variable';
+    src: url('https://fonts.gstatic.com/s/m/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2') format('woff2');
+    font-weight: 100 900;
+    font-stretch: 75% 125%;
+    font-style: normal;
+  }
+  
+  /* 动画容器样式 */
+  .text-pressure-container {
+    position: relative;
+    height: 300px; /* 动画区域高度，与示例一致 */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000; /* 背景色，可根据页面调整 */
+  }
+  
+  /* 标题基础样式 */
+  .text-pressure-title {
+    font-family: 'Compressa VF';
+    font-size: 64px; /* 初始字体大小，后续会动态调整 */
+    color: #fff; /* 文字颜色 */
+    text-transform: uppercase;
+    margin: 0;
+    user-select: none; /* 禁止选中文字 */
+    white-space: nowrap; /* 文字不换行 */
+  }
+  
+  /* 描边效果（对应 React 中的 stroke  props） */
+  .text-pressure-title.stroke span {
+    position: relative;
+  }
+  .text-pressure-title.stroke span::after {
+    content: attr(data-char);
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: transparent;
+    -webkit-text-stroke: 3px #ff0000; /* 描边颜色和宽度 */
+    z-index: -1;
+  }

@@ -1,3 +1,7 @@
+
+//智能瀑布流布局的实现方案，主要用于优化网页中卡片式内容（如文章卡片、图片卡片等）的排列方式，根据卡片数量、
+//屏幕尺寸和内容加载状态动态调整布局，让页面更美观、列高度更均衡。
+
 // 智能瀑布流布局 - 根据卡片数量选择最佳布局方式
 document.addEventListener('DOMContentLoaded', function() {
     const container = document.querySelector('.cols');

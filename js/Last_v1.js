@@ -1,3 +1,9 @@
+/*
+网页的交互逻辑脚本，主要实现了两个核心功能：
+1、移动端菜单的展开 / 收起交互 
+2、页面滚动时的导航栏样式变化和目录（TOC）固定效果
+*/
+
 /*********show menu in phone or else device *******/
 var menuIcon = document.getElementsByClassName("menu-icon")[0]
 var menuClickFlag = 0;

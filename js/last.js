@@ -1,9 +1,9 @@
-/*********show menu in phone or else device *******/
+/*********show menu in phone or else device 移动端菜单展开 / 收起（抽屉式导航） *******/
 var menuIcon = document.getElementsByClassName("menu-icon")[0]
 var menuClickFlag = 0;
 var menuOuter = document.getElementById("menu-outer");
 
-/****** add or remove a class  *************/
+/****** add or remove a class  辅助工具函数  *************/
 function modifyClass(obj, className, op) { // op = 1 add; op == 0 remove
     if (op == 1) {
         obj.classList.add(className);
@@ -49,7 +49,7 @@ menuIcon.onclick = function() {
 
 }
 
-/******** change header transparency when scroll ********/
+/******** change header transparency when scroll 滚动时导航栏动态样式（透明度和阴影） ********/
 window.addEventListener("scroll", function() {
     // 确保menuOuter存在
     if (!menuOuter) return;
@@ -90,7 +90,7 @@ window.addEventListener("scroll", function() {
 });
 
 
-/****** go to top button ******/
+/****** go to top button 跳转到评论区按钮 ******/
 var backToTopButton = document.getElementById("back-to-top")
 var toCommentButton = document.getElementById("go-to-comment")
 if (backToTopButton != null) {
@@ -120,7 +120,7 @@ if (toCommentButton != null && commentBox != null && menuA != null) {
 }
 
 
-/********* search *********/
+/********* search 搜索功能初始化（支持多种搜索引擎） *********/
 searchInput = document.getElementById("local-search-input")
 if (searchInput) {
     // Skip if multi-search is already initialized (avoid conflicts)
@@ -169,7 +169,7 @@ if (searchInput) {
 //         return false;
 // }
 
-/********** alert message ********/
+/********** alert message 消息提示功能（各种类型的弹窗） ********/
 const message = new Message();
 
 // Add safe event listeners with null checks
@@ -190,7 +190,7 @@ if (testWarning) {
     testWarning.addEventListener('click', () => {
         message.show({
             type: 'warning',
-            text: '借贷有风险，不还钱小心被打！',
+            text: '小心！',
             duration: 2000,
             isClose: true
         });
@@ -202,7 +202,7 @@ if (testError) {
     testError.addEventListener('click', () => {
         message.show({
             type: 'error',
-            text: '您的余额不够，请速速去借钱！',
+            text: '您的余额不够！',
             duration: 5000,
             isClose: true
         });
@@ -214,7 +214,7 @@ if (testSuccess) {
     testSuccess.addEventListener('click', () => {
         message.show({
             type: 'success',
-            text: '您已交钱，放您通行！但是，这个钱只是通行费用，如果你要想从这个路过去，必须乘坐我们专用的交通工具。车子本身不收钱，但是发动它需要付钱，发动一次付款100元哦~',
+            text: '您已交钱，放您通行！~',
             duration: 5000,
             isClose: true
         });

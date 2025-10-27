@@ -1,4 +1,6 @@
 /**
+ * 多搜索引擎加载器，用于在网页中集成多种搜索功能，支持多种搜索引擎
+ * （本地搜索、Algolia、Google 自定义搜索、Swiftype 等），并能根据配置自动切换或降级
  * Multi-Search Engine Loader
  * Supports: Local Search, Algolia, Google Custom Search, Swiftype
  */

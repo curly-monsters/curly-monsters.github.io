@@ -1,29 +1,40 @@
+//博客文章页面的交互功能增强脚本，主要用于优化文章阅读体验，涵盖图片查看、分享按钮布局、
+//打赏功能、目录（TOC）导航、代码块美化等多个核心交互场景。
+
+//图片查看功能初始化
 import { initImageViewer } from "./third-party/view-image.js";
 
 initImageViewer("#post-content img");
 
-/********** set share function position  ***********/
-var share = document.getElementById("share-col");
-var shareIn = document.getElementById("shareButtons")
-var midCol = document.getElementById("mid-col");
-var postTitles = document.getElementById("titles");
-var postDate = document.getElementsByClassName("date")[0];
-// alert(midCol);
-var sharePos = 1; // out of post content; also used for .date
+/********** set share function position  分享按钮的响应式布局调整 ***********/
+var share = document.getElementById("share-col"); // 分享区容器
+var shareIn = document.getElementById("shareButtons"); // 分享按钮容器
+var midCol = document.getElementById("mid-col"); // 文章内容区
+var postTitles = document.getElementById("titles"); // 文章标题区
+var postDate = document.getElementsByClassName("date")[0]; // 文章日期元素
+
+// 根据屏幕宽度调整分享区位置
+//效果：在大屏幕上，分享按钮固定在文章侧边；在小屏幕上，自动移动到标题下方，避免侧边栏挤压内容，适配移动端布局。
 function setSharePos() {
-    if (window.innerWidth < 940) {
+    if (window.innerWidth < 940) { // 小屏幕（如手机）
         if (sharePos == 1) {
+            // 移动分享区到标题下方
             insertAfter(share, postTitles);
+            // 移动日期到文章信息区
             document.getElementById("post-information").appendChild(postDate);
             sharePos = 0;
+            // 调整分享按钮样式（适应移动端）
             modifyClass(shareIn, "newShare", 1);
         }
-    } else {
+    } else { // 大屏幕（如电脑）
         if (sharePos == 0) {
+            // 恢复分享区到侧边
             midCol.parentNode.insertBefore(share, midCol);
-            modifyClass(shareIn, "newShare", 0);
+            // 恢复日期位置
             document.getElementById("first-line").appendChild(postDate);
             sharePos = 1;
+            // 恢复分享按钮样式
+            modifyClass(shareIn, "newShare", 0);
         }
     }
 }
@@ -32,63 +43,56 @@ window.onresize = function() {
     setSharePos();
 }
 
-/************* qr code DONATE function  **********/
-var qrButton = document.getElementsByClassName("qrButton")[0];
-var auInfo = document.getElementsByClassName("au-info")[0];
+/************* 打赏（二维码切换）功能  **********/
+// 元素获取
+var qrButton = document.getElementsByClassName("qrButton")[0]; // 切换按钮
+var auInfo = document.getElementsByClassName("au-info")[0]; // 作者信息区
+var payImg = document.getElementsByClassName("pay-code")[0]; // 二维码图片
+var payDiv = document.getElementById("payment-code"); // 打赏二维码容器
+var isQB = true; // 状态标记：true=显示作者信息，false=显示打赏码
 
-var payImg = document.getElementsByClassName("pay-code")[0];
-var payDiv = document.getElementById("payment-code");
-var isQB = true;
-
+// 点击按钮切换作者信息/打赏码
 qrButton.onclick = function() {
     if (isQB) {
-        // qrButton.src = "/img/person.svg";
-        changeToPerson(qrButton)
+        changeToPerson(qrButton); // 按钮图标切换为“个人”
         isQB = false;
-        auInfo.style.display = "none";
-        payDiv.style.display = "block";
+        auInfo.style.display = "none"; // 隐藏作者信息
+        payDiv.style.display = "block"; // 显示打赏码
     } else {
-        // qrButton.src = "/img/qrcode_icon.svg";
-        changeToQrcode(qrButton)
+        changeToQrcode(qrButton); // 按钮图标切换为“二维码”
         isQB = true;
-        auInfo.style.display = "block";
-        payDiv.style.display = "none";
+        auInfo.style.display = "block"; // 显示作者信息
+        payDiv.style.display = "none"; // 隐藏打赏码
     }
-}
+};
 
-// click button to change qr code img
+
+// 打赏方式切换（支付宝/微信/Zelle）
+//功能：支持点击按钮切换显示作者信息或打赏二维码，并可在多种打赏方式（支付宝、微信等）间切换，方便读者支持作者。
 document.addEventListener('DOMContentLoaded', function() {
     let paymentButtons = document.getElementsByClassName("paymentButtons");
     [...paymentButtons].forEach(function(payBt) {
         payBt.onclick = function() {
-            [...paymentButtons].forEach(function(otherBt) {
-                modifyClass(otherBt, "selected", 0);
-            });
-            // console.log(payBt.innerHTML)
+            // 移除其他按钮的选中状态
+            [...paymentButtons].forEach(otherBt => modifyClass(otherBt, "selected", 0));
+            // 选中当前按钮
             modifyClass(payBt, "selected", 1);
+            // 切换对应的二维码图片
             let qrCodeUrl = "/img/";
-            if(payBt.id == "alipay") {
-                qrCodeUrl += "alipay.jpg";
-            }
-            
-            if(payBt.id == "wechat") {
-                qrCodeUrl += "wechat.jpg";
-            }
-            if(payBt.id == "zelle") {
-                qrCodeUrl += "zelle.jpg";
-            }
-            
+            if (payBt.id === "alipay") qrCodeUrl += "alipay.jpg";
+            if (payBt.id === "wechat") qrCodeUrl += "wechat.jpg";
+            if (payBt.id === "zelle") qrCodeUrl += "zelle.jpg";
             payImg.src = qrCodeUrl;
-        }
+        };
     });
-  });
+});
 
 
-/*********** toc ***********/
+/*********** 文章目录（TOC）功能 ***********/
 
-var toc = document.getElementById("sidebar-toc"),
-    H = 0,
-    Y = toc;
+var toc = document.getElementById("sidebar-toc"); // 目录容器
+var H = 0, Y = toc;
+// 计算目录距离页面顶部的初始距离（用于滚动时固定）
 while (Y) {
     H += Y.offsetTop;
     Y = Y.offsetParent;
@@ -140,15 +144,17 @@ menuIcon.onclick = function() {
 }
 
 
+// 监听滚动，固定目录
 window.addEventListener("scroll", function() {
-    /******** fix toc *******/
-    let s = document.body.scrollTop || document.documentElement.scrollTop;
-    if (typeof(toc) != 'undefined') {
-        if (s > H - 100) {
+    let s = document.body.scrollTop || document.documentElement.scrollTop; // 滚动距离
+    if (typeof(toc) !== 'undefined') {
+        if (s > H - 100) { // 滚动超过目录初始位置-100px时
             let sidebar = document.getElementById("toc-col");
             let width = sidebar.offsetWidth;
-            toc.style = "position:fixed;top:50px;width:" + width + "px";
+            // 固定目录在顶部50px处，宽度保持原尺寸
+            toc.style = `position:fixed;top:50px;width:${width}px`;
         } else {
+            // 未滚动到指定位置，取消固定
             toc.style = "";
         }
     }

@@ -1,4 +1,8 @@
 /**
+ * 纯 JavaScript 实现的 QR 码生成库，可以在网页中动态生成 QR 码（二维码），
+ * 无需依赖其他库。它支持自定义 QR 码的尺寸、颜色，并能根据内容自动调整 QR 码版本，
+ * 同时提供不同级别的错误校正功能
+ * 
  * @fileoverview
  * - Using the 'QRCode for Javascript library'
  * - Fixed dataset of 'QRCode for Javascript library' for support full-spec.
